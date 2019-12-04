@@ -28,6 +28,10 @@
 			<artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
 		</dependency>
 		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
+		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
 			<optional>true</optional>
@@ -66,6 +70,30 @@
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
+
+	<profiles>
+		<profile>
+			<id>dev</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<properties>
+				<eureka-server-url>http://localhost:10000/eureka/</eureka-server-url>
+			</properties>
+		</profile>
+		<profile>
+			<id>test</id>
+			<properties>
+				<eureka-server-url>http://localhost:10001/eureka/</eureka-server-url>
+			</properties>
+		</profile>
+		<profile>
+			<id>product</id>
+			<properties>
+				<eureka-server-url>http://localhost:10002/eureka/</eureka-server-url>
+			</properties>
+		</profile>
+	</profiles>
 
 	<build>
 		<plugins>
