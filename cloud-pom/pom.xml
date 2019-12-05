@@ -79,18 +79,30 @@
 			</activation>
 			<properties>
 				<eureka-server-url>http://localhost:10000/eureka/</eureka-server-url>
+				<git-username>940357154@qq.com</git-username>
+				<git-password>yy52019930915.,</git-password>
+				<config-server>cloud-config-server</config-server>
+				<config-profile>dev</config-profile>
 			</properties>
 		</profile>
 		<profile>
 			<id>test</id>
 			<properties>
 				<eureka-server-url>http://localhost:10001/eureka/</eureka-server-url>
+				<git-username>940357154@qq.com</git-username>
+				<git-password>yy52019930915.,</git-password>
+				<config-server>cloud-config-server</config-server>
+				<config-profile>test</config-profile>
 			</properties>
 		</profile>
 		<profile>
 			<id>product</id>
 			<properties>
 				<eureka-server-url>http://localhost:10002/eureka/</eureka-server-url>
+				<git-username>940357154@qq.com</git-username>
+				<git-password>yy52019930915.,</git-password>
+				<config-server>cloud-config-server</config-server>
+				<config-profile>product</config-profile>
 			</properties>
 		</profile>
 	</profiles>

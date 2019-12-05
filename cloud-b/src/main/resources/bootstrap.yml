@@ -3,6 +3,15 @@ server:
 spring:
   application:
     name: @project.artifactId@
+  cloud:
+    config:
+      fail-fast: true
+      discovery:
+        service-id: @config-server@
+        enabled: true
+      name: @project.artifactId@
+      profile: @config-profile@
+
 eureka:
   instance:
     hostname: locahost
@@ -14,8 +23,4 @@ eureka:
     service-url:
       defaultZone: @eureka-server-url@
 
-management:
-  endpoints:
-    web:
-      exposure:
-        include: "*"
+

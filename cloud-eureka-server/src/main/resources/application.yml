@@ -1,4 +1,4 @@
-spring:
+ï»¿spring:
   application:
     name: @project.artifactId@
   profiles:
@@ -10,7 +10,7 @@ server:
   port: 10000
 eureka:
   server:
-    eviction-interval-timer-in-ms: 5000  # Ã¿5ÃëÒ»´Î ÒÆ³ö¹ıÆÚÊµÀı
+    eviction-interval-timer-in-ms: 200000  # æ¯5ç§’ä¸€æ¬¡ ç§»å‡ºè¿‡æœŸå®ä¾‹
   instance:
     hostname: localhost
     prefer-ip-address: true
@@ -29,8 +29,6 @@ eureka:
   instance:
     hostname: localhost
     prefer-ip-address: true
-    lease-expiration-duration-in-seconds: 90
-    lease-renewal-interval-in-seconds: 30
   client:
     register-with-eureka: false
     fetch-registry: false
@@ -46,8 +44,6 @@ eureka:
   instance:
     hostname: localhost
     prefer-ip-address: true
-    lease-expiration-duration-in-seconds: 90
-    lease-renewal-interval-in-seconds: 30
   client:
     register-with-eureka: false
     fetch-registry: false
