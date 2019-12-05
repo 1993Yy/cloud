@@ -23,4 +23,8 @@ eureka:
     service-url:
       defaultZone: @eureka-server-url@
 
-
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
