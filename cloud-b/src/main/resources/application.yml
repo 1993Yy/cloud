@@ -1,0 +1,21 @@
+server:
+  port: 10004
+spring:
+  application:
+    name: @project.artifactId@
+eureka:
+  instance:
+    hostname: locahost
+    prefer-ip-address: true
+    lease-expiration-duration-in-seconds: 3
+    lease-renewal-interval-in-seconds: 2
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${server.port}}
+  client:
+    service-url:
+      defaultZone: @eureka-server-url@
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
