@@ -13,6 +13,7 @@ spring:
           force-pull: true
           basedir: /tmp
           search-paths: deploy/dev,deploy/test
+
 eureka:
   instance:
     hostname: locahost
