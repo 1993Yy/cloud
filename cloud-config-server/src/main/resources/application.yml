@@ -33,4 +33,5 @@ management:
   endpoints:
     web:
       exposure:
-        include: "*"
+        include: "*"  #暴露刷新断点  刷新所有服务 /actuator/refresh    刷新指定服务/actuator/refresh/服务名：端口
+
