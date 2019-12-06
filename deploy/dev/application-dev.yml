@@ -23,5 +23,5 @@ hystrix:
 
 
 ribbon:
-  ReadTimeout: 1000 #ribbon请求连接的超时时间: 限制1s内必须请求到服务
-  ConnectTimeout: 5000
+  ReadTimeout: 5000 #ribbon请求连接的超时时间: 限制1s内必须请求到服务
+  ConnectTimeout: 2000 #ribbon请求连接的超时时间: 限制2s内必须请求到服务
