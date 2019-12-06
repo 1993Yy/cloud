@@ -1,1 +1,4 @@
 name: cloud-test
+feign:
+  hystrix:
+    enabled: true
