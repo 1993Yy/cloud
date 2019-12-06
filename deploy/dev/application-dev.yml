@@ -11,7 +11,7 @@ feign:
 
 hystrix:
   command:
-    default:
+    default: #可以换成服务名，接口级别"BFeignClient#test()"
       execution:
         isolation:
           thread:
@@ -22,6 +22,14 @@ hystrix:
         sleepWindowInMilliseconds: 5000 #断路器跳闸后，在此值的时间的内，hystrix会拒绝新的请求，只有过了这个时间断路器才会打开闸门 默认值：5000
 
 
-ribbon:  #会对get请求进行重试
+ribbon:  #会对get请求进行重试，重试间隔ReadTimeout
   ReadTimeout: 5000 #ribbon请求连接的超时时间: 限制1s内必须请求到服务
   ConnectTimeout: 2000 #ribbon请求连接的超时时间: 限制2s内必须请求到服务
+  MaxAutoRetries: 1 #重试次数默认1
+  MaxAutoRetriesNextServer: 1 #切换实例次数
+  OkToRetryOnAllOperations: true #所有请求都重试，get post...
+#只针对某个服务ribbon 设置
+#cloud-b:
+#  ribbon:
+#    ReadTimeout: 5000
+#    ConnectTimeout: 2000

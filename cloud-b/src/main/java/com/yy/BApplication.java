@@ -8,6 +8,9 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.time.LocalDateTime;
+import java.util.concurrent.TimeUnit;
+
 @SpringBootApplication
 @EnableEurekaClient
 @RestController
@@ -25,7 +28,14 @@ public class BApplication {
     private String clientName;
 
     @GetMapping("/")
-    public Object test(){
+    public String test() {
+        System.out.println(LocalDateTime.now()+"fdfdf");
+        try {
+            TimeUnit.SECONDS.sleep(60);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        System.out.println("testst");
         return name+"--------------"+clientName;
     }
 }
