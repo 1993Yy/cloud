@@ -13,11 +13,11 @@ spring:
           force-pull: true
           basedir: /tmp
           search-paths: deploy/dev,deploy/test
-#  rabbitmq:
-#    host: localhost
-#    port: 5672
-#    username: guest
-#    password: guest
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
 
 eureka:
   instance:
@@ -29,4 +29,8 @@ eureka:
   client:
     service-url:
       defaultZone: @eureka-server-url@
-
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
