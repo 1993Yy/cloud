@@ -31,7 +31,7 @@ public class BApplication {
     public String test() {
         System.out.println(LocalDateTime.now()+"fdfdf");
         try {
-            TimeUnit.SECONDS.sleep(60);
+            TimeUnit.SECONDS.sleep(58);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
