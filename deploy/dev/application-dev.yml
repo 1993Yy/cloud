@@ -23,7 +23,7 @@ hystrix:
 
 
 ribbon:  #会对get请求进行重试，重试间隔ReadTimeout
-  ReadTimeout: 5000 #ribbon请求连接的超时时间: 限制1s内必须请求到服务
+  ReadTimeout: 60000 #响应时间: 60s内响应
   ConnectTimeout: 2000 #ribbon请求连接的超时时间: 限制2s内必须请求到服务
   MaxAutoRetries: 1 #重试次数默认1
   MaxAutoRetriesNextServer: 1 #切换实例次数
