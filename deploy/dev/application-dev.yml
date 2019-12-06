@@ -20,3 +20,8 @@ hystrix:
         errorThresholdPercentage: 50 #设置失败百分比的阈值。如果失败比率超过这个值，则断路器跳闸并且进入fallback逻辑默认值：50
         requestVolumeThreshold: 20 #在配置时间窗口内达到此数量的失败后，进行短路======(默认值：20个)
         sleepWindowInMilliseconds: 5000 #断路器跳闸后，在此值的时间的内，hystrix会拒绝新的请求，只有过了这个时间断路器才会打开闸门 默认值：5000
+
+
+ribbon:
+  ReadTimeout: 5000
+  ConnectTimeout: 5000
